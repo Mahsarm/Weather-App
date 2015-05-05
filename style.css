@@ -1,0 +1,286 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-----------------------end of reset--------------------------
+---------------------border-box/clearfix----------------------*/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+
+/*------------------------------------------------------------
+------------------------------------------------------------*/
+body{
+    background: rgb(90,71,119);
+    background: -moz-linear-gradient(top, rgba(90, 71, 119, 1) 42%,rgba(62, 184, 249, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(42%,rgba(90,71,119,1)), color-stop(100%,rgba(62,184,249,1))); 
+    background: -webkit-linear-gradient(top, rgba(90, 71, 119, 1) 42%,rgba(62, 184, 249, 1) 100%);
+    background: -o-linear-gradient(top, rgba(90, 71, 119, 1) 42%,rgba(62, 184, 249, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(90, 71, 119, 1) 42%,rgba(62, 184, 249, 1) 100%);
+    background: linear-gradient(to bottom, rgba(90,71,119,1) 42%, rgba(62,184,249,1) 100%);
+    background-attachment:fixed;
+    height:100%;
+    color: white;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Open Sans', sans-serif;
+    color: white;}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+    
+h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+input{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+
+/*------------------------------------------------------------
+------------------------------------------------------------*/
+
+.wrapper{
+    position: relative;
+    max-width: 100%;
+	margin: 0 auto;
+    display:block;
+    text-align:center;
+    
+}
+
+div.w_container{
+    max-width: 1000px;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: none;
+}
+
+.border{
+    border: 2px solid white;
+}
+
+.location-form{
+    margin-top: 70px;
+}
+
+.location-form .user_location{
+    padding: 10px 20px 10px 2px ;
+}
+
+.location-form input{
+    padding: 10px 20px;
+}
+
+input[name="send"]{
+    cursor: pointer;
+    outline:none;
+    box-shadow: 0 5px 5px purple;
+    -webkit-transition: all 0.15s;
+    transition: all 0.15s;
+    position:relative;
+}
+
+input[name="send"]:active{
+    box-shadow: 0 3px 3px black;
+    position:relative;
+    top:3px;
+    left:3px;
+}
+
+.error{
+margin: 5px auto;
+}
+
+div.header{
+    margin: 0 auto;
+}
+
+div.overcast{
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+    
+}
+
+div.temperature {
+    float: right;
+    width: 55%;
+    margin: 50px 2% 10px 10px;
+}
+
+
+.temp p {
+    font-weight: 450;
+    font-size: 150px;
+}
+
+.feel_temp p{
+   font-weight: 200;
+}
+
+div.w_icon{
+    float: left;
+    width: 30%;
+    margin: 0px 10px 5px 5%;
+ 
+}
+
+img {
+    max-width: 100%;
+}
+
+.details{
+    padding-top: 20px;
+}
+
+
+footer{
+clear: both;
+}
+
+
+/*----------------RWD-----------------------------
+-------------------------------------------------*/
+
+@media (min-width: 481px) and (max-width:768px){
+    
+    .location-form{
+    margin-top: 50px;
+}
+
+    .temp p{
+        font-size: 100px;
+        font-weight: 400;
+    }
+    
+    div.temperature{
+        margin: 30px 2% 10px 10px;
+    
+    }
+    
+}
+
+
+@media (max-width: 481px) {
+    
+    .location-form{
+    margin-top: 10px;
+    }
+    
+    .temp p{
+        font-size: 50px;
+        font-weight: 400;
+    }
+    
+    p{
+    font-size: 15px;   
+    }
+    
+    h1 {
+    font-size: 30px;
+}
+
+    h3 {
+    font-size: 20px;
+    }
+    
+    p{
+        
+    }
+
+    div.temperature{
+        margin: 20px 2% 10px 10px;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
